@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árbol Desplegable de Provincias y Ciudades</title>
+    <style>
+        ul {
+            padding-left: 10;
+        }
+        .provincia {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .ciudades {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Árbol Desplegable de Provincias y Ciudades</h1>
+    <ul id="arbol">
+        <li class="provincia">Neuquén <span onclick="toggleCiudades(this)">-</span>
+            <ul class="ciudades">
+                <li>Neuquén</li>
+                <li>Zapala</li>
+                <li>San Martín</li>
+                <li>Junín</li>
+            </ul>
+        </li>
+        <li class="provincia">Rio Negro <span onclick="toggleCiudades(this)">-</span>
+            <ul class="ciudades">
+                <li>Cipolletti</li>
+                <li>Fernández Oro</li>
+                <li>Roca</li>
+                <li>Cinco Saltos</li>
+                <li>Allen</li>
+            </ul>
+        </li>
+        <li class="provincia">Buenos Aires <span onclick="toggleCiudades(this)">-</span>
+            <ul class="ciudades">
+                <li>La Plata</li>
+                <li>Mar del Plata</li>
+                <li>Necochea</li>
+            </ul>
+        </li>
+    </ul>
+
+    <script type="text/javascript" src="arbol.js"></script>
+</body>
+</html>

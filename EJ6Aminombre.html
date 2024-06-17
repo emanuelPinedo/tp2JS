@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocumentWrite</title>
+</head>
+<body>
+    <div id="contra">
+        <label for="contrasenia">Ingrese la contraseña:</label>
+        <input type="password" id="contrasenia">
+        <button onclick="verificarContra()">Enviar</button>
+        <p id="msj"></p>
+    </div>
+    <div id="datos" style="display: none;">
+        <script type="text/javascript" src="datosminombre.js"></script>
+    </div>
+
+    <script type="text/javascript">
+        function verificarContra() {
+            var contrasenia = document.getElementById("contrasenia").value;
+            var msj = document.getElementById("msj");
+            
+            switch(contrasenia) {
+                case 'minombre':
+                    document.getElementById("contra").style.display = 'none';
+                    document.getElementById("datos").style.display = 'block';
+                    break;
+                default:
+                    msj.textContent = 'Contraseña incorrecta';
+            }
+        }
+    </script>
+</body>
+</html>
